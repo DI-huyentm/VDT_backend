@@ -2,7 +2,7 @@ appName: api
 
 port: 4000
 
-namespace: vdt-api
+namespace: api
 
 configmap:
   name: myhelmapp-configmap-v1
