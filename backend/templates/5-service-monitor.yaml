@@ -9,7 +9,7 @@ metadata:
 spec:
   namespaceSelector:
     matchNames:
-      - staging
+      - {{ .Values.namespace }}
   selector:
     matchLabels:
       app: myweb-monitoring
