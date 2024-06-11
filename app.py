@@ -2,10 +2,13 @@ from flask import request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 from flask_cors import CORS
+from prometheus_flask_exporter import PrometheusMetrics
 import os
 
 app = Flask(__name__)
 CORS(app)
+
+metrics = PrometheusMetrics(app)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///my_flask_app.sqlite"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
