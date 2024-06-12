@@ -14,3 +14,4 @@ spec:
       targetPort: http-metrics
   selector:
     app: {{ .Values.appName }}
+    tier: backend

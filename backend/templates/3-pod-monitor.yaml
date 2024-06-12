@@ -13,6 +13,7 @@ spec:
   selector:
     matchLabels:
       app: {{ .Values.appName }}
+      tier: backend
   podMetricsEndpoints:
     - port: http-metrics
       path: /metrics
