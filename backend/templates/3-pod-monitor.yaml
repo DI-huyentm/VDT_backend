@@ -2,17 +2,17 @@
 apiVersion: monitoring.coreos.com/v1
 kind: PodMonitor
 metadata:
-  name: { { .Values.appName } }
-  namespace: { { .Values.namespace } }
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.namespace }}
   labels:
     prometheus: main
 spec:
   namespaceSelector:
     matchNames:
-      - { { .Values.namespace } }
+      - {{ .Values.namespace }}
   selector:
     matchLabels:
-      app: { { .Values.appName } }
+      app: {{ .Values.appName }}
       tier: backend
   podMetricsEndpoints:
     - port: http-metrics
