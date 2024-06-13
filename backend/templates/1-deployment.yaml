@@ -22,13 +22,13 @@ spec:
           image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           imagePullPolicy: Always
           ports:
-            - name: http
-              containerPort: { { .Values.port } }
-            - name: http-metrics
-              containerPort: { { .Values.port } }
+          - name: http
+            containerPort: { { .Values.port } }
+          - name: http-metrics
+            containerPort: { { .Values.port } }
           envFrom:
-            - configMapRef:
-                name: { { .Values.configmap.name } }
+          - configMapRef:
+            name: { { .Values.configmap.name } }
           resources:
             requests:
               memory: "16Mi"
