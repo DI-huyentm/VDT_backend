@@ -7,8 +7,8 @@ namespace: api
 configmap:
   name: myhelmapp-configmap-v1
   data:
-    CUSTOM_HEADER: 'This app was deployed with helm!'
+    CUSTOM_HEADER: "This app was deployed with helm!"
 
 image:
-  name: baofci/app
+  name: huyencnh70/vdt-api
   tag: latest

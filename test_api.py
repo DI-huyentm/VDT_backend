@@ -9,7 +9,7 @@ class TestAPI(unittest.TestCase):
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
         self.app = app.test_client()
         self.student_data = {
-            "name": "Ba Bao",
+            "name": "Huyen",
             "gender": 0,
             "school": "HUST"
         }
@@ -31,7 +31,7 @@ class TestAPI(unittest.TestCase):
 
     def test_get_students(self):
         with app.app_context():
-            new_student = Student(name="Ba Bao", gender=0, school="HUST")
+            new_student = Student(name="Huyen", gender=0, school="HUST")
             db.session.add(new_student)
             db.session.commit()
 
@@ -43,7 +43,7 @@ class TestAPI(unittest.TestCase):
 
     def test_update_student(self):
         with app.app_context():
-            new_student = Student(name="Ba Bao", gender=0, school="HUST")
+            new_student = Student(name="Huyen", gender=0, school="HUST")
             db.session.add(new_student)
             db.session.commit()
 
@@ -62,7 +62,7 @@ class TestAPI(unittest.TestCase):
 
     def test_delete_student(self):
         with app.app_context():
-            new_student = Student(name="Ba Bao", gender=0, school="HUST")
+            new_student = Student(name="Huyen", gender=0, school="HUST")
             db.session.add(new_student)
             db.session.commit()
 
